@@ -32,6 +32,20 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
+---
+Types of markdown code blocks:
+
+>python
+
+```python
+
+def some_function(x):
+  return x*"test"
+```
+>bash
+```
+cd Downloads/docker-project
+```
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 ### Jekyll Themes
