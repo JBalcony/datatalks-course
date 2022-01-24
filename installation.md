@@ -1,6 +1,6 @@
 ---
 title: Dcoker Installation Notes
-layout: jekyll-theme-tactile
+layout: template
 filename: installation.md
 --- 
 
