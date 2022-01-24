@@ -1,7 +1,7 @@
-
+<!-- 
 layout: template
 title: Docker Installation Notes
-filename: installation.md
+filename: installation.md -->
 
 
 # 1. Docker
