@@ -1,20 +1,7 @@
 ## DataTalks.Club Data Engineering Course
 
-You can use the [editor on GitHub](https://github.com/JBalcony/datatalks-course/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-TEST TEST TEST TEST
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-# Header 1
-## Header 2
-### Header 3
-
-////
-
-
-
-
-[Docker Installation on Ubuntu](installation.md)
+1. [Setup and installation notes for Ubuntu 21.10 ](installation.md)
 
 
 
