@@ -1,8 +1,8 @@
----
-title: Dcoker Installation Notes
+
 layout: template
+title: Docker Installation Notes
 filename: installation.md
---- 
+
 
 # 1. Docker
 
