@@ -1,7 +1,13 @@
 ## DataTalks.Club Data Engineering Course
 
+Week 1:
 
 1. [Setup and installation notes for Ubuntu 21.10 ](installation.md)
+2. 
+
+Week 2:
+
+2. 
 
 
 
