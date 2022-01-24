@@ -33,6 +33,39 @@ Add your user to the docker group.
 
  **systemd** manages which services start when the system boots
  
+ 
+# 2. VS CODE
+
+### 2.1 Installation
+
+
+### Ubuntu based distributions
+
+The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868), either through the graphical software center if it's available, or through the command line with:
+
+```bash
+sudo apt install ./<file>.deb
+
+# Older Linux distribution:
+# sudo dpkg -i <file>.deb
+# sudo apt-get install -f # Install dependencies
+```
+
+
+```bash
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+```
+
+Update the package cache and install the package using:
+
+```bash
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code # or code-insiders
+ 
 `sudo systemctl enable docker.service`
 
 `sudo systemctl enable containerd.service`
