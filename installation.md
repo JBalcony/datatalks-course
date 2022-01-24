@@ -1,3 +1,9 @@
+---
+title: Dcoker Installation Notes
+layout: jekyll-theme-tactile
+filename: installation.md
+--- 
+
 # 1. Docker
 
 ### 1.1 Docker login / permission denied
