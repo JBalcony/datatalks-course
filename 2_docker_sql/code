@@ -108,3 +108,48 @@ taxi_ingest:v001 \
   --db=ny_taxi \
   --table_name=yellow_taxi_trips \
   --url=${URL}
+
+
+
+## running image and docker for the ingest_data_zones.py data ingestion
+
+TRIP_URL="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv"
+
+ZONE_URL="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+
+docker run -it \
+  --network=2_docker_sql_default \
+  taxi_ingest:v001 \
+    --user=root \
+    --password=root \
+    --host=pgdatabase \
+    --port=5432 \
+    --db=ny_taxi \
+    --trip_url=${TRIP_URL} \
+    --zone_url=${ZONE_URL}
+
+
+
+## running steps image and docker for the ingest_data_zones2.py data ingestion
+
+## 1
+docker-compose up -d
+
+## 2
+docker build -t taxi_ingest:v001 .
+
+## 3
+URL1="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv"
+URL2="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+docker run -it \
+--network=2_docker_sql_default \
+taxi_ingest:v001 \
+  --user=root \
+  --password=root \
+  --host=pgdatabase \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --table_name=taxi_zone_lookup \
+  --url_1=${URL1} \
+	--url_2=${URL2}
